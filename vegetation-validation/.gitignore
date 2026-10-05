@@ -1,0 +1,29 @@
+data/internal/
+
+# Historical internal-work notebooks
+old-work/
+
+# Generated outputs
+outputs/
+
+# Python
+__pycache__/
+*.pyc
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+*.DS_Store
+Thumbs.db
+
+# Environments
+.venv/
+venv/
+env/
+
+# Secrets / credentials
+.env
+*.pem
+*.key

@@ -1,0 +1,11 @@
+SYNTHETIC OUTAGE DATA FOR CODE DEVELOPMENT
+
+2023: 350 generated rows. 2024: 479 generated rows. Same 11-column schema as the cleaned datasets.
+
+All records are generated. No source rows, real coordinates, real names, outage numbers, or identity mappings are included. Fictional inventory: 24 substations with three feeders each, stable across years. These IDs do NOT correspond to the earlier private lookup.
+
+Calibration uses pooled 2023-2024 aggregate month frequencies, event-type frequencies, event-type log-duration/customer means and covariances, and monthly weather summaries. Smoothing and sampling change individual values, category counts and monthly counts. Yearly row totals match the source by design. Customer minutes are recalculated from duration multiplied by customers out. No Outage records have zero impacts.
+
+Weather is sampled from monthly distributions. This does not preserve storm clustering or full weather-impact relationships. The occasional No Outage records are event categories, not a complete sample of feeder-time periods without outages. No vegetation-cause label is included. Use for demonstrating data handling and exploratory code, not evidence of real-world predictive performance.
+
+Generator requires numpy and pandas; seed 20261005 reproduces these files. No original CSVs are needed to run the supplied generator.
